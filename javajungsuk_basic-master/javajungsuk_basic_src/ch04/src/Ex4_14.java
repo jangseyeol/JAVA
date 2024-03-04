@@ -2,21 +2,21 @@ import java.util.*;
 
 class Ex4_14 {
 	public static void main(String[] args) { 
-		int num = 0, sum = 0;
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(¿¹:12345)>");
+		int num = 12345, sum = 0;
+	
+		//10ìœ¼ë¡œ ë‚˜ëˆ„ë©´ ë‚˜ë¨¸ì§€ëŠ” 5 (ë§ˆì§€ë§‰ ìë¦¬ë¥¼ ì–»ëŠ”ë‹¤.)
+//		System.out.println(12345%10); 
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine();  // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		num = Integer.parseInt(tmp);      // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
-
-		while(num!=0) {    
-			// numÀ» 10À¸·Î ³ª´« ³ª¸ÓÁö¸¦ sum¿¡ ´õÇÔ
-			sum += num%10; 	// sum = sum + num%10;
-			System.out.printf("sum=%3d num=%d%n", sum, num);
-
-			num /= 10;   // num = num / 10;  numÀ» 10À¸·Î ³ª´« °ªÀ» ´Ù½Ã num¿¡ ÀúÀå
+		//num = 12345,1234,123,12,1
+		while(num>0) {
+			sum += num %10; // sum = sum+ (num%10)  // sum= 5, num%10 = 5 
+			//sum = 5+4, num%10 = 4
+			System.out.println("sum=" +sum + ",num%10=" +num%10); //ë§ˆì§€ë§‰ ìë¦¬ ì–»ê¸° ìœ„í•´ %10 í•˜ë©´ ë¨
+			num= num/10; //1234
 		}
-
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ:"+sum);
+		
+		
+		
+		System.out.println("ê° ìë¦¬ìˆ˜ì˜ í•©" + sum);
 	}
 }

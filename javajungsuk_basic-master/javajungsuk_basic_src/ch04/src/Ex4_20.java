@@ -2,50 +2,28 @@ import java.util.*;
 
 class Ex4_20 {
 	public static void main(String[] args) { 
-		int menu = 0, num  = 0;
-		Scanner scanner = new Scanner(System.in);
-
-		outer:   // while¹®¿¡ outer¶ó´Â ÀÌ¸§À» ºÙÀÎ´Ù. 
-		while(true) {
-			System.out.println("(1) square");
-			System.out.println("(2) square root");
-			System.out.println("(3) log");
-			System.out.print("¿øÇÏ´Â ¸Ş´º(1~3)¸¦ ¼±ÅÃÇÏ¼¼¿ä.(Á¾·á:0)>");
-
-			String tmp = scanner.nextLine(); // È­¸é¿¡¼­ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-			menu = Integer.parseInt(tmp);    // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
-
-			if(menu==0) {  
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-				break;
-			} else if (!(1<= menu && menu <= 3)) {
-				System.out.println("¸Ş´º¸¦ Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.(Á¾·á´Â 0)");
-				continue;		
+	
+		int menu = 0, num =0;
+		Scanner sc = new Scanner(System.in);
+		
+		outer:
+			while(true) {
+				System.out.println("(1) square");
+				System.out.println("(2) square root");
+				System.out.println("(3) log");
+				System.out.println("ì›í•˜ëŠ” ë©”ë‰´(1~3)ë¥¼ ì„ íƒí•˜ì„¸ìš”.(ì¢…ë£Œ:0)>");
+				
+				String tmp = sc.nextLine();
+				menu = Integer.parseInt(tmp);
+				
+				if(menu==0) {
+					System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+					break;
+				} else if(!(1<=menu && menu <=3)) {
+					System.out.println("ë©”ë‰´ë¥¼ ì˜ëª» ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤.(ì¢…ë£ŒëŠ” 0)");
+					continue;
+				}
 			}
-
-			for(;;) {
-		      System.out.print("°è»êÇÒ °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä.(°è»ê Á¾·á:0, ÀüÃ¼ Á¾·á:99)>");
-				tmp = scanner.nextLine();    // È­¸é¿¡¼­ ÀÔ·Â¹ŞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-				num = Integer.parseInt(tmp); // ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­(tmp)À» ¼ıÀÚ·Î º¯È¯
-
-				if(num==0)  
-					break;        // °è»ê Á¾·á. for¹®À» ¹ş¾î³­´Ù.
-
-				if(num==99) 
-					break outer;  // ÀüÃ¼ Á¾·á. for¹®°ú while¹®À» ¸ğµÎ ¹ş¾î³­´Ù.
-
-				switch(menu) {
-					case 1: 
-						System.out.println("result="+ num*num);		
-						break;
-					case 2: 
-						System.out.println("result="+ Math.sqrt(num)); 
-						break;
-					case 3: 
-						System.out.println("result="+ Math.log(num));  
-						break;
-				} 
-			} // for(;;)
-		} // whileÀÇ ³¡
-	} // mainÀÇ ³¡
+	}
+	
 }

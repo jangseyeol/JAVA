@@ -2,15 +2,15 @@ import java.util.Arrays;
 
 class Ex5_4 {
 	public static void main(String[] args) {
-		int[] numArr = {0,1,2,3,4,4,5,6,7,8,9};
+		int[] numArr = {0,1,2,3,4,5,6,7,8,9};
 		System.out.println(Arrays.toString(numArr));
 
-		for (int i=0; i < 100; i++ ) {
-			int n = (int)(Math.random() * 10);  // 0~9 ÁßÀÇ ÇÑ °ªÀ» ÀÓÀÇ·Î ¾ò´Â´Ù.
-			int tmp = numArr[0];
-			numArr[0] = numArr[n];
+		for (int i=0; i <numArr.length; i++ ) {
+			int n = (int)(Math.random() * 10);  // 0~9 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½Â´ï¿½.
+			int tmp = numArr[i];
+			numArr[i] = numArr[n];
 			numArr[n] = tmp;
+			System.out.println(Arrays.toString(numArr));
 		}
-		System.out.println(Arrays.toString(numArr));
-	} // mainÀÇ ³¡
+	} // 
 }

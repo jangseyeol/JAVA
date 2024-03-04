@@ -1,8 +1,8 @@
 class Ex6_4 {
 	public static void main(String args[]) {
 		MyMath mm = new MyMath();
-		long result1 = mm.add(5L, 3L);
-		long result2 = mm.subtract(5L, 3L);
+		long result1 = mm.add(5L, 3L); //add ë©”ì„œë“œ í˜¸ì¶œ
+		long result2 = mm.subtract(5L, 3L); 	
 		long result3 = mm.multiply(5L, 3L);
 		double result4 = mm.divide(5L, 3L);
 
@@ -16,8 +16,8 @@ class Ex6_4 {
  class MyMath {
 	long add(long a, long b) {
 		long result = a + b;
-		return result;
-	//	return a + b;	// À§ÀÇ µÎ ÁÙÀ» ÀÌ¿Í °°ÀÌ ÇÑ ÁÙ·Î °£´ÜÈ÷ ÇÒ ¼ö ÀÖ´Ù.
+		return result; 
+	//	return a + b;	// ì´ë ‡ê²Œ í‘œí˜„í•  ìˆ˜ ìˆìŒ.
 	}
 	long subtract(long a, long b) { return a - b; }
 	long multiply(long a, long b) { return a * b; }

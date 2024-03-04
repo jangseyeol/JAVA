@@ -1,16 +1,18 @@
 class Ex5_2 {
 	public static void main(String[] args) {
-		int   sum = 0;      // ÃÑÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-		float average = 0f; // Æò±ÕÀ» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
+		int   sum = 0;      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		float average = 0f; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 		int[] score = {100, 88, 100, 100, 90};
 
+		sum += score[0];
+		
 		for (int i=0; i < score.length ; i++ ) {
 			sum += score[i];
 		}
-		average = sum / (float)score.length ; // °è»ê°á°ú¸¦ float·Î ¾ò±â À§ÇØ¼­ Çüº¯È¯
+		average = sum / (float)score.length ; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ floatï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½È¯
 
-		System.out.println("ÃÑÁ¡ : " + sum);
-		System.out.println("Æò±Õ : " + average);
+		System.out.println("ì´ì  : " + sum);
+		System.out.println("í‰ê·  : " + average);
 	}
 }

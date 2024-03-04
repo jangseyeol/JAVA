@@ -17,6 +17,15 @@ public class Example01 {
 		c1.eat();
 				
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Cat c2  = new Cat();
 		
 		c2.breed = "코리아";

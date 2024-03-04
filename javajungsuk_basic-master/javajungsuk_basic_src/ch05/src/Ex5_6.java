@@ -1,15 +1,14 @@
+import java.util.Arrays;
+
 class Ex5_6 {
 	public static void main(String[] args) {
-		String[] names = {"Kim", "Park", "Yi"};
-
-		for(int i=0; i < names.length;i++)
-			System.out.println("names["+i+"]:"+names[i]);
-
-		String tmp = names[2]; // ¹è¿­ namesÀÇ ¼¼ ¹øÂ°¿ä¼Ò¸¦ tmp¿¡ ÀúÀå
-		System.out.println("tmp:"+tmp);
-		names[0] = "Yu"; // ¹è¿­ namesÀÇ Ã¹ ¹øÂ° ¿ä¼Ò¸¦ "Yu"·Î º¯°æ
-
-		for(int i=0; i < names.length;i++)
-			System.out.println(names[i]);
-	} // main
+		String str = "ABCDE"; //str.length() ëŠ” 5
+			//        01234
+		char ch = str.charAt(2);
+		String str2 = str.substring(1,4);
+		String str3 = str.substring(1, str.length()); //1~4 
+		String str4 = str.substring(1); //1~4
+		System.out.println(str4);   
+		
+	} 
 }

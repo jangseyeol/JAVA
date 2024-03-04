@@ -7,15 +7,15 @@ class Ex5_9 {
 							, { 40, 40, 40}
 							, { 50, 50, 50}
 						};
-		// °ú¸ñº° ÃÑÁ¡
+		// ê³¼ëª©ë³„ ì´ì 
 		int korTotal = 0, engTotal = 0, mathTotal = 0;
 
-	    System.out.println("¹øÈ£  ±¹¾î  ¿µ¾î  ¼öÇĞ  ÃÑÁ¡  Æò±Õ ");
+	    System.out.println("ë²ˆí˜¸ êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì´ì  í‰ê· ");
 	    System.out.println("=============================");
 
 		for(int i=0;i < score.length;i++) {
-			int  sum = 0;      // °³ÀÎº° ÃÑÁ¡
-			float avg = 0.0f;  // °³ÀÎº° Æò±Õ
+			int  sum = 0;      // ï¿½ï¿½ï¿½Îºï¿½ ï¿½ï¿½ï¿½ï¿½
+			float avg = 0.0f;  // ï¿½ï¿½ï¿½Îºï¿½ ï¿½ï¿½ï¿½
 
 			korTotal  += score[i][0];
 			engTotal  += score[i][1];
@@ -27,11 +27,11 @@ class Ex5_9 {
 				System.out.printf("%5d", score[i][j]);
 			}
 
-			avg = sum/(float)score[i].length;  // Æò±Õ°è»ê
+			avg = sum/(float)score[i].length;  // ï¿½ï¿½Õ°ï¿½ï¿½
 			System.out.printf("%5d %5.1f%n", sum, avg);
 		}
 
 		System.out.println("=============================");
-     	System.out.printf("ÃÑÁ¡:%3d %4d %4d%n", korTotal, engTotal, mathTotal);
+     	System.out.printf("ì´ì :%3d %4d %4d%n", korTotal, engTotal, mathTotal);
 	}
 }
