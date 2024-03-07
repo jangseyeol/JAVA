@@ -6,6 +6,8 @@ class Ex6_4 {
 		long result3 = mm.multiply(5L, 3L);
 		double result4 = mm.divide(5L, 3L);
 
+		mm.printGugudan(12);
+		
 		System.out.println("add(5L, 3L) = " + result1);
 		System.out.println("subtract(5L, 3L) = " + result2);
 		System.out.println("multiply(5L, 3L) = " + result3);
@@ -14,7 +16,31 @@ class Ex6_4 {
  }
 
  class MyMath {
-	long add(long a, long b) {
+	 void printGugudan(int dan) {
+		 if(!(2<=dan && dan <=9)) {
+			 return;
+		 }else {
+		 for(int i=1; i<=9; i++) {
+			 System.out.printf("%d*%d = %d%n", dan, i, dan*i);
+		 }
+		 return;
+		 }
+	 }
+	 
+	 
+	 long max(long a, long b) {
+		 if(a>b) {
+			 return a;
+		 }
+
+		 else {
+			 return b;
+		 }
+	 }
+	 
+	 
+	 
+	 long add(long a, long b) {
 		long result = a + b;
 		return result; 
 	//	return a + b;	// 이렇게 표현할 수 있음.
